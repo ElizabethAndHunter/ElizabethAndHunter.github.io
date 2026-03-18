@@ -1,0 +1,247 @@
+body {
+    background-image: url("opacity-background-3.png"); 
+    background-size: cover;
+}
+.navigation {
+    height: 8%;
+    border: #4d7558 3px solid;
+    background-color: #93b59f;
+    display: flex;
+    align-items: center;
+    font-size: 20;
+    top: 0px;
+}
+.buttons {
+    display: flex;
+    margin-left: auto;
+    gap: 12px;
+}
+.embedded, .embedded:visited {
+    color: #4d7558;
+    text-decoration: none;
+}
+.embedded:hover, .embedded:visited:hover {
+    text-decoration: underline;
+}
+.nav, .nav:visited {
+    color: black;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.nav:hover, .nav:visited:hover {
+    text-decoration: underline;
+    color: #4d7558;
+}
+.content {
+    text-align: center;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+}
+#mainpage {
+    font-family: cursive;
+}
+h1 {
+    font-family: cursive;
+}
+#tabletext {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+img {
+    border: #4d7558 3px solid;
+}
+iframe {
+    width: 45vw;
+    height: 40vh;
+}
+#bridalparty {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+#countdown {
+    font-size: 2vw;
+    color: #4d7558;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border: #4d7558 3px solid; 
+    padding: 5px;
+    background-color: #FAD0C1;
+    font-family: cursive;
+}
+.mySlides {
+    display: none;
+}
+#gal {
+    vertical-align: middle;
+}
+.slideshow-container { 
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  width: 30%; 
+  height: 30%;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: peachpuff;
+}
+.next {
+  right: 0;
+  border-radius: 3px 3px 3px 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 3px 3px 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: black;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  padding-left: 10px;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  float: top;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #93b59f;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #4d7558;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media screen and (max-width: 768px) {
+
+    body {
+        background-size: cover;
+    }
+
+    /* Navigation stacks vertically */
+    .navigation {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    /* Tables become stacked */
+    table {
+        width: 100% !important;
+    }
+
+    table tr {
+        display: block;
+    }
+
+    table td {
+        display: block;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* Make images responsive */
+    img {
+        width: 90% !important;
+        height: auto !important;
+        margin-left: 0 !important;
+    }
+
+    /* Countdown readable on phone */
+    #countdown {
+        font-size: 18px;
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    /* Bridal party spacing */
+    #bridalparty {
+        padding: 10px 0;
+    }
+
+    /* Slideshow scales properly */
+    .slideshow-container {
+        width: 90%;
+        height: auto;
+    }
+
+    iframe {
+        width: 90vw;
+        height: 40vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+    
+    table td img, #tablephoto img, .content img {
+        display: block;
+        margin: 20px auto !important;
+        width: 90% !important;
+        height: auto !important;
+    }
+    
+    img {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .numbertext {
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        left: 20; 
+    }
+}

@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Hunter and Elizabeth's Official Wedding Website</title>
+        <link type = "text/css" rel = "stylesheet" href = "style.css" />
+        <link rel = "icon" type = "image/x-icon" href = "icon-flower.png"/>
+        <meta name = "description" content = "Hunter and Elizabeth's Wedding Website" />
+        <meta name = "keywords" content = "Hunter, Hunter Campbell, Elizabeth, Elizabeth Cucuzzella, Hunter and Elizabeth, Pittsburgh, Wedding, Hunter and Elizabeth Wedding, Campbell Wedding, Cucuzzella Wedding" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class = "navigation">
+            <a href = "index.html" class = "nav" id = "mainpage">Hunter&amp;Elizabeth</a>
+            <div class = "buttons">
+                <div class = "button">
+                    <a href = "schedule.html" class = nav>Schedule</a>
+                </div>
+                <div class = "button">
+                    <a href = "travel.html" class = "nav">Travel</a>
+                </div>
+                <div class = "button">
+                    <a href = "gallery.html" class = "nav">Gallery</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "content">
+            <h1>Photo Gallery</h1>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+            </div>
+            <br />
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="pittsburgh.png" style="width:80%; height: 200%;" id = "gal">
+                    <div class="text">
+                        During the first year of their relationship, Hunter and Elizabeth flew back and forth between Pittsburgh and Boston once a month to visit one another. Both enjoyed getting to experience a new city and spend time together.
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="phippsflowers.png" style="width:100%" id = "gal">
+                    <div class="text">
+                        After undergrad, Elizabeth moved to Pittsburgh to pursue her PhD in Statistics and Data Science at CMU as Hunter was finishing his final semester of his Masters in Mechanical Engineering and his final season of football. One of their favorite places to visit in the city was Phipps Conservatory.
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="football.png" style="width:80%; height: 200%;" id = "gal">
+                    <div class="text">
+                        Hunter finished his final football season in Fall 2024. Elizabeth was able to attend most of his home games and cheered him on as his team made a deep playoff run that winter. 
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="blacksandbeach.png" style="width:100%" id = "gal">
+                    <div class="text">
+                        After Christmas in 2024, Hunter's family took a trip to Hawaii and invited Elizabeth. Hunter and Elizabeth had a great time exploring the Big Island, visiting black sand beaches, waterfalls, rainforests, and even snorkeling in a coral reef. 
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="comiccon.jpg" style="width:80%; height: 200%;" id = "gal">
+                    <div class="text">
+                        Both Hunter and Elizabeth have long shared a love for all things nerdy. They've attended Steel City Con together (in cosplay, of course) and both hope to one day visit San Diego Comic Con. 
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="epic.jpg" style="width:80%; height: 200%;" id = "gal">
+                    <div class="text">
+                        For Elizabeth's Fall Break 2025, Hunter and Elizabeth traveled to Epic Universe in Orlando, FL, fulfilling Elizabeth's near-life long dream of visiting Harry Potter World, and their shared desire to experience the new Nintendo World.
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="newhome.jpg" style="width:80%; height: 200%;" id = "gal">
+                    <div class="text">On Halloween 2025, Hunter and Elizabeth moved into their first house together in Squirrel Hill.</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="engagement.jpg" style="width:100%" id = "gal">
+                    <div class="text">On New Year's Eve at Navy Pier in Chicago, IL, Hunter proposed to Elizabeth shortly before midnight fireworks. They spent the rest of their evening celebrating the engagement and the new year with their friends Taylor and Patrick before heading back to Hunter's home the next day to officially celebrate with family.</div>
+                </div>
+                
+                <div class = "mySlides fade">
+                    <img src = "poppy.jpg" style = "width:80%; height: 200%;" id = "gal">
+                    <div class = "text">In March, 2026, Hunter and Elizabeth expanded their family by welcoming Poppy, a puppy rescue from Paws Across Pittsburgh, into their home. Poppy has brought some much needed chaos, snuggles, and a ton of love bites to the Campbell family.</div>
+                </div>
+
+                <!--<a class="prev" onclick="plusSlides(-1)">❮</a>-->
+                <!--<a class="next" onclick="plusSlides(1)">❯</a>-->
+
+            </div>
+            
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+                }
+            </script>
+        </div>
+    </body>
+</html>

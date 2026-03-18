@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Hunter and Elizabeth's Official Wedding Website</title>
+        <link type = "text/css" rel = "stylesheet" href = "style.css" />
+        <link rel = "icon" type = "image/x-icon" href = "icon-flower.png"/>
+        <meta name = "description" content = "Hunter and Elizabeth's Wedding Website" />
+        <meta name = "keywords" content = "Hunter, Hunter Campbell, Elizabeth, Elizabeth Cucuzzella, Hunter and Elizabeth, Pittsburgh, Wedding, Hunter and Elizabeth Wedding, Campbell Wedding, Cucuzzella Wedding" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class = "navigation">
+            <a href = "index.html" class = "nav" id = "mainpage">Hunter&amp;Elizabeth</a>
+            <div class = "buttons">
+                <div class = "button">
+                    <a href = "schedule.html" class = nav>Schedule</a>
+                </div>
+                <div class = "button">
+                    <a href = "travel.html" class = "nav">Travel</a>
+                </div>
+                <div class = "button">
+                    <a href = "gallery.html" class = "nav">Gallery</a>
+                </div>
+            </div>
+        </div>
+        <div class = "content">
+            <table style = "width:90%;">
+                <tr>
+                    <td id = "tabletext" style = "width:50%">
+                        <h1>Our Story</h1>
+                        <p style = "padding-left: 10%; padding-right: 10%;">Hunter and Elizabeth met during the summer of 2023 while Elizabeth was conducting research at Argonne National Labs, not far from where Hunter lived. After dating for the summer, the couple decided to continue to date long distance while finishing out their senior years, Elizabeth at Tufts in Boston, and Hunter at Carnegie Mellon in Pittsburgh. After graduating, Elizabeth moved in with Hunter in Pittsburgh while pursuing her PhD in Statistics and Data Science at Carnegie Mellon. Hunter finished his last year of football for CMU that Fall and transitioned to post-undergraduate life, working as a mechanical engineer at Sargent&amp;Lundy in Cranberry Township, right outside Pittsburgh. The two moved into their first house together in October of 2025. Hunter proposed on New Year's Eve, 2025 during a trip to Chicago with friends. </p>
+                    </td>
+                    <td id = "tablephoto">
+                        <img src = "hawaii.jpg" width = 60% height = 30% style = "margin-left: 20%; "/>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <text id="countdown"></text>
+            <h1>The Bridal Party</h1>
+            <table style = "width:90%;">
+                <tr>
+                    <td id = "bridalparty"><b>Caroline Cucuzzella</b><br /><i>Maid of Honor</i></td>
+                    <td id = "bridalparty"><b>Taylor Roddy</b><br /><i>Bridesmaid</i></td>
+                    <td id = "bridalparty"><b>Julia Jenulis</b><br/><i>Bridesmaid</i></td>
+                    <td id = "bridalparty"><b>Laura Kelly</b><br/><i>Bridesmaid</i></td>
+                    <td id = "bridalparty"><b>Megan Campbell</b><br/><i>Bridesmaid</i></td>
+                </tr>
+                
+                <tr>
+                    <td id = "bridalparty"><b>Conor Campbell</b><br /><i>Best Man</i></td>
+                    <td id = "bridalparty"><b>Kevin O'Brien</b><br /><i>Groomsman</i></td>
+                    <td id = "bridalparty"><b>Dustin Moss</b><br/><i>Groomsman</i></td>
+                    <td id = "bridalparty"><b>Nick Dziedzic</b><br/><i>Groomsman</i></td>
+                    <td id = "bridalparty"><b>Ben Dziedzic</b><br/><i>Groomsman</i></td>
+                </tr>
+            </table>
+            <script>
+                var countDownDate = new Date("Apr 17, 2027 18:00:00").getTime();
+                var x = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                document.getElementById("countdown").innerHTML = "Ceremony starts in " + days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+    
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+                }, 1000);
+            </script>
+        </div>
+    </body>
+</html>
